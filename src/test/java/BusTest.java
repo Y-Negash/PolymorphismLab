@@ -10,5 +10,15 @@ public class BusTest {
         bus = new Bus(6,80,"Ground");
     }
 
+    @Test
+    public void canAccelerate(){
+        bus.accelerate();
+    }
+
+    @Test
+    public void canBrake(){
+        bus.brake();
+    }
+
 
 }
