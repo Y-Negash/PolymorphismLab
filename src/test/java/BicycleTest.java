@@ -9,7 +9,7 @@ public class BicycleTest {
 
     @BeforeEach
     public void setUp(){
-        bicycle = new Bicycle(2,1,"Ground","Complete Ownership");
+        bicycle = new Bicycle(2,1,"Ground","Complete Ownership",1.70,2040);
     }
 
     @Test
@@ -22,5 +22,13 @@ public class BicycleTest {
         assertThat(bicycle.brake()).isEqualTo("Slowing down!");
     }
 
+    @Test
+    public void canRentBicycle(){
+        assertThat(bicycle.rentBicycle()).isEqualTo(0);
+    }
 
+    @Test
+    public void canBuyBicycle(){
+        assertThat(bicycle.buyBicycle()).isEqualTo(2040);
+    }
 }
