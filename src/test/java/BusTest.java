@@ -10,6 +10,5 @@ public class BusTest {
         bus = new Bus(6,80,"Ground");
     }
 
-    @Test
 
 }

@@ -11,5 +11,12 @@ public abstract class Vehicle {
         this.travelEnviron = travelEnviron;
     }
 
+    public String accelerate(){
+        return "Speeding up!";
+    }
+
+    public String brake(){
+        return "Slowing down!";
+    }
 
 }
