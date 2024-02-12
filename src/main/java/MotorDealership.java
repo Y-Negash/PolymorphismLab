@@ -11,7 +11,7 @@ public class MotorDealership {
         this.vehicles.add(vehicle);
     }
 
-    public int countVehicles() {
+    public int vehicleCount() {
         return  this.vehicles.size();
     }
 

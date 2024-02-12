@@ -10,11 +10,11 @@ public abstract class Vehicle {
         this.maxOccupancy = maxOccupancy;
         this.travelEnviron = travelEnviron;
     }
-
+//ACCELERATE METHOD
     public String accelerate(){
         return "Speeding up!";
     }
-
+//BRAKE METHOD
     public String brake(){
         return "Slowing down!";
     }
