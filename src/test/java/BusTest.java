@@ -24,7 +24,14 @@ public class BusTest {
         assertThat(bus.brake()).isEqualTo("Slowing the bus down!");
     }
 
-    @Test void canGetPrice(){
-        assertThat(bus.getPrice("Student")).isEqualTo(1.05);
+    @Test
+    public void canGetOysterPrice(){
+        assertThat(bus.getOysterPrice("Student")).isEqualTo(1.05);
     }
+
+    @Test
+    public void canGetBuyPrice(){
+        assertThat(bus.getBuyPrice()).isEqualTo(10000);
+    }
+
 }

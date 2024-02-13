@@ -1,4 +1,6 @@
-public abstract class Vehicle {
+import interfaces.ISell;
+
+public abstract class Vehicle implements ISell {
 
    protected int numberOfWheels;
    protected int maxOccupancy;

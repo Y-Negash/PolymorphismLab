@@ -1,3 +1,4 @@
+import interfaces.ISell;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -23,7 +24,7 @@ public class BicycleTest {
     }
 
     @Test
-    public void canRentBicycle(){
+    public void canRentBicycle() {
         assertThat(bicycle.rentBicycle()).isEqualTo(0);
     }
 
@@ -33,7 +34,8 @@ public class BicycleTest {
     }
 
     @Test
-    public void canBuyBicycle(){
-        assertThat(bicycle.buyBicycle()).isEqualTo(2040);
+    public void canGetBuyBicycle(){
+        assertThat(bicycle.getBuyPrice()).isEqualTo(2040);
     }
+
 }

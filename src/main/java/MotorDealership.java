@@ -1,21 +1,20 @@
+import interfaces.ISell;
+
 import java.util.ArrayList;
 
 public class MotorDealership {
 
-    protected ArrayList<Vehicle> vehicles;
+    protected ArrayList<ISell> storage;
     public MotorDealership(){
-        this.vehicles = new ArrayList<>();
+        this.storage = new ArrayList<>();
+    }
+    public void addProducts(ISell product){
+        this.storage.add(product);
     }
 
-    public void addVehicles(Vehicle vehicle){
-        this.vehicles.add(vehicle);
+    public int productCount() {
+        return  this.storage.size();
     }
 
-    public int vehicleCount() {
-        return  this.vehicles.size();
-    }
-
-
-//
 }
 

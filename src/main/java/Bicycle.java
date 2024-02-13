@@ -1,6 +1,8 @@
+import interfaces.ISell;
+
 import java.util.Objects;
 
-public class Bicycle extends Vehicle {
+public class Bicycle extends Vehicle implements ISell {
 
     protected String ownershipType;
     protected double rentalPrice;
@@ -15,19 +17,16 @@ public class Bicycle extends Vehicle {
         this.rentTime = rentTime;
     }
 
+    public String brake(){
+        return "Slowing the bicycle down!";
+    }
+
     public double rentBicycle() {
         if (Objects.equals(this.ownershipType, "Rental")) {
             return rentalPrice;
         } else {
             return 0;
         }
-    }
-
-    public double buyBicycle() {
-        if (!this.ownershipType.equals("Rental")) {
-            return buyPrice;
-        }
-        return 10000; // if wanting to buy a rental bicycle
     }
 
     public double rentBicycle(int rentTime) {
@@ -40,8 +39,8 @@ public class Bicycle extends Vehicle {
         }
     }
 
-    public String brake(){
-        return "Slowing the bicycle down!";
+    public double getBuyPrice() {
+        return buyPrice;
     }
-//
+
 }
