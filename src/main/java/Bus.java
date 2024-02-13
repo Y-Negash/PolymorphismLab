@@ -13,7 +13,16 @@ public class Bus extends Vehicle {
         this.oysterType = oysterType;
     }
 
-    public double getPrice() {
-        return price;
+    public double getPrice(String oysterType){
+        if(oysterType.equals("Senior")){
+            return this.price * 0;
+        } else if (oysterType.equals("Student")) {
+            return this.price * 0.6;
+        }
+        return this.price;
+    }
+
+    public String brake(){
+        return "Slowing the bus down!";
     }
 }

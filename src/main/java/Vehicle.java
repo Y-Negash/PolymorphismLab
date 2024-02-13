@@ -15,8 +15,5 @@ public abstract class Vehicle {
         return "Speeding up!";
     }
 //BRAKE METHOD
-    public String brake(){
-        return "Slowing down!";
-    }
-
+    public abstract String brake();
 }

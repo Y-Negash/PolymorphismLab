@@ -11,7 +11,7 @@ public class BusTest {
 
     @BeforeEach
     public void setUp() {
-        bus = new Bus(6, 80, "Ground", 1.75, "diesel", "Standard");
+        bus = new Bus(6, 80, "Ground", 1.75, "Diesel", "Student");
     }
 
     @Test
@@ -21,14 +21,10 @@ public class BusTest {
 
     @Test
     public void canBrake() {
-        assertThat(bus.brake()).isEqualTo("Slowing down!");
+        assertThat(bus.brake()).isEqualTo("Slowing the bus down!");
     }
 
-    @Test
-    public void canGetPrice() {
-        if (Objects.equals(bus.oysterType, "Standard")) {
-            assertThat(bus.getPrice()).isEqualTo(1.75);
-        }
-
+    @Test void canGetPrice(){
+        assertThat(bus.getPrice("Student")).isEqualTo(1.05);
     }
 }
